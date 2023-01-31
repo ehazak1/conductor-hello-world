@@ -1,0 +1,62 @@
+{
+  "createTime": 1675177926807,
+  "updateTime": 1675128695178,
+  "name": "ehazak-hello-world",
+  "description": "Edit or extend this sample workflow. Set the workflow name to get started",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "ehazak-hello-world",
+      "taskReferenceName": "simple_task_z828w_ref",
+      "description": "receives a name as input and outputs a hello [name] message",
+      "inputParameters": {
+        "name": "${workflow.input.name}"
+      },
+      "type": "SIMPLE",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "retryCount": 3
+    },
+    {
+      "name": "ehazak-reverse-message",
+      "taskReferenceName": "simple_task_jt27p_ref",
+      "description": "receives a text input and outputs a reversed text",
+      "inputParameters": {
+        "hello_message": "${simple_task_z828w_ref.output.hello_message}"
+      },
+      "type": "SIMPLE",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "retryCount": 3
+    }
+  ],
+  "inputParameters": [
+    "name"
+  ],
+  "outputParameters": {
+    "task1_output": "${simple_task_z828w_ref.output.hello_message}",
+    "task2_output": "${simple_task_jt27p_ref.output.reverse_message}"
+  },
+  "schemaVersion": 2,
+  "restartable": true,
+  "workflowStatusListenerEnabled": false,
+  "ownerEmail": "ehazak@gmail.com",
+  "timeoutPolicy": "ALERT_ONLY",
+  "timeoutSeconds": 0,
+  "variables": {},
+  "inputTemplate": {}
+}

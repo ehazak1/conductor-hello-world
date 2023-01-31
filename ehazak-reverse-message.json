@@ -1,0 +1,26 @@
+{
+  "createTime": 1675127556576,
+  "updateTime": 1675128380636,
+  "createdBy": "ehazak@gmail.com",
+  "updatedBy": "ehazak@gmail.com",
+  "name": "ehazak-reverse-message",
+  "description": "receives a text input and outputs a reversed text",
+  "retryCount": 3,
+  "timeoutSeconds": 3600,
+  "inputKeys": [
+    "hello_message"
+  ],
+  "outputKeys": [
+    "reverse_message"
+  ],
+  "timeoutPolicy": "TIME_OUT_WF",
+  "retryLogic": "FIXED",
+  "retryDelaySeconds": 60,
+  "responseTimeoutSeconds": 600,
+  "inputTemplate": {},
+  "rateLimitPerFrequency": 0,
+  "rateLimitFrequencyInSeconds": 1,
+  "ownerEmail": "ehazak@gmail.com",
+  "pollTimeoutSeconds": 3600,
+  "backoffScaleFactor": 1
+}
