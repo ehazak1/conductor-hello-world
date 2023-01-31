@@ -1,14 +1,24 @@
 {
-  "name": "",
-  "description": "Edit or extend this sample task. Set the task name to get started",
+  "createTime": 1675127451919,
+  "createdBy": "ehazak@gmail.com",
+  "name": "ehazak-hello-world",
+  "description": "receives a name as input and outputs a hello [name] message",
   "retryCount": 3,
   "timeoutSeconds": 3600,
+  "inputKeys": [
+    "name"
+  ],
+  "outputKeys": [
+    "hello_message"
+  ],
   "timeoutPolicy": "TIME_OUT_WF",
   "retryLogic": "FIXED",
   "retryDelaySeconds": 60,
   "responseTimeoutSeconds": 600,
+  "inputTemplate": {},
   "rateLimitPerFrequency": 0,
   "rateLimitFrequencyInSeconds": 1,
   "ownerEmail": "ehazak@gmail.com",
-  "pollTimeoutSeconds": 3600
+  "pollTimeoutSeconds": 3600,
+  "backoffScaleFactor": 1
 }
