@@ -11,7 +11,7 @@ class ehazak_hello_world_worker(WorkerInterface):
     def execute(self, task: Task) -> TaskResult:
         task_result = self.get_task_result_from_task(task)
         name = task.input_data["name"]
-        hello_message = "hello {}".format(name)
+        hello_message = "Hello World {}".format(name)
         task_result.add_output_data('hello_message', hello_message)
         task_result.status = TaskResultStatus.COMPLETED
         return task_result
